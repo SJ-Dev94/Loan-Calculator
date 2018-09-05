@@ -26,7 +26,33 @@ function calculateResults(e){
     totalPayment.value = (monthly * calculatedPayments).toFixed(2);
     totalInterest.value = ((monthly * calculatedPayments)-principal).toFixed(2);
   } else {
-    alert('Please check your numbers');
+      showError(' Please check your numbers');
   }
   e.preventDefault();
+}
+
+function showError(error){
+  //create div
+  const errorDiv = document.createElement('div');
+
+  // get elements
+  const card = document.querySelector('.card');
+  const heading = document.querySelector('.heading ');
+
+  //add class
+  errorDiv.className = 'alert alert-danger';
+
+  //create text node and append to errorDiv
+  errorDiv.appendChild(document.createTextNode(error));
+
+  //insert error
+  card.insertBefore(errorDiv, heading);
+
+  //clear error aftr 3 seconds
+  setTimeout(clearError, 3000);
+
+}
+
+function clearError(){
+  document.querySelector('.alert').remove();
 }
