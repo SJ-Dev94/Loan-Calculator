@@ -9,8 +9,12 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
-
-  <title></title>
+  
+  <style>
+  #loading, #results {
+   display: none; 
+  }
+  </style>
 </head>
 
 <body class="bg-dark">
@@ -40,9 +44,9 @@
           </div>
           </form>
           <!-- LOADER HERE -->
-          <!-- <div id="loading">
+          <div id="loading">
             <img src="img/loading.gif" alt="">
-          </div> -->
+          </div>
           <!-- RESULTS -->
           <div id="results" class="pt-4">
           <h5>Results</h5>
@@ -59,7 +63,6 @@
               <input type="number" class="form-control" id="total-payment" disabled>
             </div>
           </div>
-        </div>
 
         <div class="form-group">
           <div class="input-group">
@@ -68,6 +71,7 @@
           </div>
         </div>
     </div>
+  </div>
   </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
